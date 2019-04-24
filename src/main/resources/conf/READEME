@@ -1,0 +1,8 @@
+这个文档是Hadoop客户端的配置文件
+
+hadoop -conf 配置文件名 连接指定的集群
+
+例子：
+
+hadoop fs -conf src/main/resources/conf/hadoop-local.xml -ls
+hadoop fs -conf src/main/resources/conf/hadoop-localhost.xml -ls 

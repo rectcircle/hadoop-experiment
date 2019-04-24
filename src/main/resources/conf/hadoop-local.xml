@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<configuration>
+
+  <!-- 这是连接本地模式的Hadoop执行任务 -->
+  <property>
+    <name>fs.defaultFS</name>
+    <value>file:///</value>
+  </property>
+  
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>local</value>
+  </property>
+  
+</configuration>

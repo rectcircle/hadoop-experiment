@@ -1,0 +1,35 @@
+这个目录是Hadoop伪分布式配置文件目录
+
+需要配置SSH免密登录（MAC启用：设置 -> 共享 -> 远程登录）
+
+/etc/hosts：配置当前主机名指向127.0.0.1
+
+改动的配置文件如下：
+core-site.xml
+hdfs-site.xml
+mapred-site.xml
+yarn-site.xml
+
+使用HADOOP_CONF_DIR环境变量指定 或者 使用 启动脚本 --config指定
+
+启动伪分布式集群：
+
+export HADOOP_CONF_DIR=$(pwd)/src/main/resources/pseudo-distribute-conf
+hdfs namenode -format
+$HADOOP_HOME/sbin/start-dfs.sh
+$HADOOP_HOME/sbin/start-yarn.sh
+$HADOOP_HOME/sbin/mr-jobhistory-daemon.sh start historyserver
+hadoop fs -mkdir -p /user/sunben
+hadoop fs -put input .
+
+# 检测
+
+http://localhost:50070
+http://localhost:8088
+http://localhost:19888
+
+# 停止
+$HADOOP_HOME/sbin/mr-jobhistory-daemon.sh stop historyserver
+$HADOOP_HOME/sbin/stop-yarn.sh
+$HADOOP_HOME/sbin/stop-dfs.sh
+

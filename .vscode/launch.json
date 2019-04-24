@@ -1,0 +1,25 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - TextIterator",
+			"request": "launch",
+			"mainClass": "cn.rectcircle.hadooplearn.ioapi.TextIterator",
+			"projectName": "hadooplearn"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - ConfigurationPrinter",
+			"request": "launch",
+			"mainClass": "cn.rectcircle.hadooplearn.apilearn.ConfigurationPrinter",
+			"projectName": "wordcount"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - ConfigurationAPI",
+			"request": "launch",
+			"mainClass": "cn.rectcircle.hadooplearn.apilearn.ConfigurationAPI",
+			"projectName": "wordcount"
+		}
+	]
+}

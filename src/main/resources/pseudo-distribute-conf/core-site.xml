@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://localhost/</value>
+  </property>
+  
+  <!-- mac或Window设置（没有手动编译Hadoop本地库情况下） -->
+  <property>
+    <name>io.native.lib.available</name>
+    <value>false</value>
+  </property>
+  
+  <!-- 使用 HADOOP_CONF_DIR 环境变量指定配置文件目录 -->
+</configuration>
